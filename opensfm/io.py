@@ -477,6 +477,7 @@ def shot_to_json(shot: pymap.Shot) -> Dict[str, Any]:
         "rotation": list(shot.pose.rotation),
         "translation": list(shot.pose.translation),
         "camera": shot.camera.id,
+        "origin": list(shot.pose.get_origin()),
     }
 
     if shot.metadata is not None:
